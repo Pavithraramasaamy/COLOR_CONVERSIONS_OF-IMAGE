@@ -1,9 +1,11 @@
-# EXP-01 COLOR_CONVERSIONS_OF-IMAGE
+# EXP:-1 Record Image color Conversions
+
 ## AIM
 Write a Python program using OpenCV that performs the following tasks:
+
 i) Read and Display an Image.
 
-ii) 	Draw Shapes and Add Text.
+ii) Draw Shapes and Add Text.
 
 iii) Image Color Conversion.
 
@@ -17,303 +19,300 @@ vii) Image Flipping
 
 viii)	Write and Save the Modified Image
 
+
 ## Software Required:
 Anaconda - Python 3.7
 ## Algorithm:
 ### Step1:
 Load an image from your local directory and display it.
 ### Step2:
-o	Draw a line from the top-left to the bottom-right of the image.
-o	Draw a circle at the center of the image.
-o	Draw a rectangle around a specific region of interest in the image.
-o	Add the text "OpenCV Drawing" at the top-left corner of the image.
+1.  Draw a line from the top-left to the bottom-right of the image.
+
+2.	Draw a circle at the center of the image.
+
+3.	Draw a rectangle around a specific region of interest in the image.
+
+4.	Add the text "OpenCV Drawing" at the top-left corner of the image.
 
 ### Step3:
-o	Convert the image from RGB to HSV and display it.
-o	Convert the image from RGB to GRAY and display it.
-o	Convert the image from RGB to YCrCb and display it.
-o	Convert the HSV image back to RGB and display it.
+1.	Convert the image from RGB to HSV and display it.
+2.	Convert the image from RGB to GRAY and display it.
+3.	Convert the image from RGB to YCrCb and display it.
+4.	Convert the HSV image back to RGB and display it.
 
 ### Step4:
-o	Access and print the value of the pixel at coordinates (100, 100).
-o	Modify the color of the pixel at (200, 200) to white.
+1.	Access and print the value of the pixel at coordinates (100, 100).
+2.	Modify the color of the pixel at (200, 200) to white.
 
 ### Step5:
-o	Resize the original image to half its size and display it.
+Resize the original image to half its size and display it.
 ### Step6:
-o	Crop a region of interest (ROI) from the image (e.g., a 100x100 pixel area starting at (50, 50)) and display it.
+Crop a region of interest (ROI) from the image (e.g., a 100x100 pixel area starting at (50, 50)) and display it.
 ### Step7:
-o	Flip the original image horizontally and display it.
-o	Flip the original image vertically and display it.
+1.	Flip the original image horizontally and display it.
+2.	Flip the original image vertically and display it.
 
 ### Step8:
-o	Save the final modified image to your local directory.
-##### Program:
+Save the final modified image to your local directory.
+
+
+## Program:
 ### Developed By: PAVITHRA R
 ### Register Number: 212222230106
+
+
 ## Output:
-### i)Read and Display an Image
+
+### 1. Read and display the image
+i.Load an image from your local directory and display it.
 ```
 import cv2
-image=cv2.imread('msdd.jpg',1)
-cv2.imshow('Image Window', image)
+image=cv2.imread('virat.jpeg')
+cv2.imshow('Cricket',image)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 ```
-![Screenshot 2024-09-09 160731](https://github.com/user-attachments/assets/8a21bca1-0cae-4c0d-99e7-9754e9d1b7d6)
-<br>
-### ii)Draw Shapes and Add Text
-i)Draw a line from the top-left to the bottom-right of the image.
+![1](https://github.com/user-attachments/assets/62b92907-fd8f-4092-ac68-590dcb57c93c)
+
+
+### Draw Shapes and Add Text
+(1) Draw a line from the top-left to the bottom-right of the image.
 ```
-res = cv2.line(img, (0, 0), (300, 168), (200, 100, 300), 10)
-cv2.imshow('Image Window', res)
+import cv2
+image = cv2.imread("virat.jpeg")
+image = cv2.resize(image, (400, 300))
+res = cv2.line(image, (0, 0), (image.shape[1], image.shape[0]), (255,0,0), 10)
+cv2.imshow('Cricket', res)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 ```
-![Screenshot 2024-09-09 161410](https://github.com/user-attachments/assets/d6771874-83e0-4002-a718-6c02d9d202a3)
 
-ii)Draw a circle at the center of the image.
+![2](https://github.com/user-attachments/assets/d66f0c04-9c06-4ebd-89de-6d184596a1b1)
+
+
+2. Draw a circle at the center of the image.
 ```
 import cv2
-
-# Load the image
-img = cv2.imread("msdd.jpg")
-
-# Get the dimensions of the image
-height, width, _ = img.shape
-
-# Calculate the center of the image
+image = cv2.imread("virat.jpeg")
+image = cv2.resize(image, (400, 300))
+height, width, _ = image.shape
 center_coordinates = (width // 2, height // 2)
-
-# Draw a circle at the center of the image
-res = cv2.circle(img, center_coordinates, 90, (255, 0, 0), 10)
-
-# Display the image with the circle
-cv2.imshow('Image Window', res)
-cv2.waitKey(0)
-cv2.destroyAllWindows()
-
-```
-![Screenshot 2024-09-09 161831](https://github.com/user-attachments/assets/8b4ca2a5-8db8-403d-bc50-42138fcdb8c4)
-
-iii)Draw a rectangle around a specific region of interest in the image.
-```
-import cv2
-
-img = cv2.imread("msdd.jpg")
-start=(10,10)
-stop=(200,150)
-color=(100,255,100)
-thickness=6
-res_img=cv2.rectangle(img,start,stop,color,thickness)
-# Display the HSV image
-cv2.imshow('Image Window', res_img)
+res = cv2.circle(image, center_coordinates, 120, (0, 255, 0), 10)
+cv2.imshow('Cricket', res)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 ```
-![Screenshot 2024-09-09 162433](https://github.com/user-attachments/assets/439d724f-2b43-453d-b38e-fce158be395e)
 
-iv)Add the text "MSD" at the top-left corner of the image.
+![3](https://github.com/user-attachments/assets/560ac909-2d48-483d-8629-9e0eafef28dc)
+
+
+3.Draw a rectangle around a specific region of interest in the image.
 ```
 import cv2
+image = cv2.imread("virat.jpeg")
+image = cv2.resize(image, (400, 300))
+start = (150, 100)
+stop = (300, 200)
+color = (255, 255, 100)
+thickness = 10           
+res_img = cv2.rectangle(image, start, stop, color, thickness)
+cv2.imshow('Cricket', res_img)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+```
 
-# Load the image
-img = cv2.imread("msdd.jpg")
+![4](https://github.com/user-attachments/assets/d1c22a73-d893-4472-8a22-ebdaa82a34cd)
 
-# Define the text to be added and its position
-text = "MSD"
-position = (50, 50)  # Positioning the text at the top-left corner
 
-# Set the font, scale, color, and thickness of the text
+4.Add the text "Cricket" at the top-left corner of the image.
+```
+import cv2
+image = cv2.imread("virat.jpeg")
+image = cv2.resize(image, (400, 300))
+text = "ViratKohli"
+position = (10, 50)
 font = cv2.FONT_HERSHEY_SIMPLEX
 font_scale = 1
-color = (255, 255, 255)  # White color
+color = (255, 255, 255) 
 thickness = 2
-
-# Add the text to the image
-res = cv2.putText(img, text, position, font, font_scale, color, thickness, cv2.LINE_AA)
-
-# Display the image with the text
-cv2.imshow('Image Window', res)
+res = cv2.putText(image, text, position, font, font_scale, color, thickness, cv2.LINE_AA)
+cv2.imshow('Cricket', res)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 ```
-![Screenshot 2024-09-09 162645](https://github.com/user-attachments/assets/df67fe3d-3157-426c-8b87-b4f653025bc8)
-<br>
+![5](https://github.com/user-attachments/assets/e802b3a2-1762-4901-89fc-dccb721129a7)
+
 ### iii)Image Color Conversion
-i)Convert the image from RGB to HSV and display it.
+(i)Convert the image from RGB to HSV and display it
 ```
 import cv2
-img = cv2.imread('msdd.jpg',1)
-img = cv2.resize(img,(300,200))
-cv2.imshow('Original Image',img)
-hsv2 = cv2.cvtColor(img,cv2.COLOR_RGB2HSV)
-cv2.imshow('RGB2HSV',hsv2)
+image = cv2.imread('virat.jpeg',1)
+image = cv2.resize(image,(300,200))
+cv2.imshow('ORIGINAL IMAGE',image)
+hsv = cv2.cvtColor(image,cv2.COLOR_RGB2HSV)
+cv2.imshow('RGB2HSV',hsv)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 ```
-![Screenshot 2024-09-09 183224](https://github.com/user-attachments/assets/b66ec7b6-df97-401b-bcbf-d67c44f8add0)
-![Screenshot 2024-09-09 162800](https://github.com/user-attachments/assets/1539482a-ab05-4d08-b767-22966bdcb125)
 
-ii.)Convert the image from RGB to GRAY and display it.
-```
-import cv2
-img = cv2.imread('msdd.jpg',1)
-img = cv2.resize(img,(300,200))
-cv2.imshow('Original Image',img)
-gray2 = cv2.cvtColor(img,cv2.COLOR_RGB2GRAY)
-cv2.imshow('RGB2GRAY',gray2)
-cv2.waitKey(0)
-cv2.destroyAllWindows()
-```
-![Screenshot 2024-09-09 183224](https://github.com/user-attachments/assets/b66ec7b6-df97-401b-bcbf-d67c44f8add0)
-![Screenshot 2024-09-09 163019](https://github.com/user-attachments/assets/047cf43f-e4ff-4cfa-8fdb-50a653841d11)
+![6](https://github.com/user-attachments/assets/c5671b9d-64ed-493d-88da-c6662acc159c)
 
-iii.)Convert the image from RGB to YCrCb and display it.
-```
-import cv2
-img = cv2.imread('msdd.jpg',1)
-img = cv2.resize(img,(300,200))
-cv2.imshow('Original Image',img)
-YCrCb1 = cv2.cvtColor(img, cv2.COLOR_BGR2YCrCb)
-cv2.imshow('RGB-2-YCrCb',YCrCb1)
-cv2.waitKey(0)
-cv2.destroyAllWindows()
-```
-![Screenshot 2024-09-09 183224](https://github.com/user-attachments/assets/b66ec7b6-df97-401b-bcbf-d67c44f8add0)
-![Screenshot 2024-09-09 163113](https://github.com/user-attachments/assets/c26ffd9b-938c-4b7a-ae56-92ddfce1ddb6)
 
-iv.)Convert the HSV image back to RGB and display it.
+(2) Convert the image from RGB to GRAY and display it.
+
 ```
 import cv2
-img = cv2.imread('msdd.jpg',1)
-img = cv2.resize(img,(300,200))
-cv2.imshow('Original Image',img)
-BGR = cv2.cvtColor(img,cv2.COLOR_HSV2BGR)
-cv2.imshow('HSV2RGB',BGR)
+image = cv2.imread('virat.jpeg',1)
+image = cv2.resize(image,(300,200))
+cv2.imshow('ORIGINAL IMAGE',image)
+gray = cv2.cvtColor(image,cv2.COLOR_RGB2GRAY)
+cv2.imshow('RGB2GRAY',gray)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 ```
-![Screenshot 2024-09-09 183224](https://github.com/user-attachments/assets/b66ec7b6-df97-401b-bcbf-d67c44f8add0)
-![Screenshot 2024-09-09 175059](https://github.com/user-attachments/assets/fa5a53e8-05e4-4228-85f5-2602257be409)
+
+
+![7](https://github.com/user-attachments/assets/712a1ab8-117f-47c6-9323-e26448ba6eb4)
+
+
+(3) Convert the image from RGB to YCrCb and display it.
+```
+import cv2
+image = cv2.imread('virat.jpeg',1)
+image = cv2.resize(image,(300,200))
+cv2.imshow('ORIGINAL IMAGE',image)
+YCrCb = cv2.cvtColor(image, cv2.COLOR_BGR2YCrCb)
+cv2.imshow('RGB-2-YCrCb',YCrCb)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+```
+
+![8](https://github.com/user-attachments/assets/623910e0-cd89-4229-9bd2-f1a9f3061f0f)
+
+
+
+(4) Convert the HSV image back to RGB and display it.
+```
+import cv2
+image = cv2.imread('virat.jpeg',1)
+image = cv2.resize(image,(300,200))
+cv2.imshow('ORIGINAL IMAGE',image)
+RGB = cv2.cvtColor(image,cv2.COLOR_HSV2BGR)
+cv2.imshow('HSV2RGB',RGB)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+```
+
+![9](https://github.com/user-attachments/assets/1c4517df-33c9-496c-8d07-9cf6fa1d8efa)
+
+
+
 ### iv)Access and Manipulate Image Pixels
+(1) Access and print the value of the pixel at coordinates (100, 100)
 ```
 import cv2
-
-# Load and resize the image
-img = cv2.imread('msdd.jpg', 1)
-img = cv2.resize(img, (300, 200))
-
-# Show the original image
-cv2.imshow('Original Image', img)
-
-# 1. Access and print the value of the pixel at coordinates (100, 100)
-pixel_value = img[100, 100]
+image = cv2.imread("virat.jpeg")
+pixel_value = image[100, 100]
 print(f"Pixel value at (100, 100): {pixel_value}")
-
-# 2. Modify the color of the pixel at (199, 199) to white
-img[199, 199] = [255, 255, 255]  # Setting the pixel value to white (BGR)
-
-# Display the modified image
-cv2.imshow('Modified Image', img)
-
-# Wait for a key press and close the windows
-cv2.waitKey(0)
-cv2.destroyAllWindows()
-
 ```
-![Screenshot 2024-09-09 183224](https://github.com/user-attachments/assets/b66ec7b6-df97-401b-bcbf-d67c44f8add0)
-![Screenshot 2024-09-09 175115](https://github.com/user-attachments/assets/312eadc9-d379-4093-9764-529f98e86cbb)
-### v)Image Resizing
+![10](https://github.com/user-attachments/assets/bd83e39a-d997-4c54-a3e3-93c687d02dac)
+
+
+
+
+(2) Modify the color of the pixel at (200, 200) to white
 ```
-width=600
-height=800
-half_width=300
-half_height=400
-resized_img = cv2.resize(image, (300, 400))
-cv2.imshow('Original',image)
-cv2.imshow('resized',resized_img)
+import cv2
+image = cv2.imread('virat.jpeg',1)
+image = cv2.resize(image,(400,300))
+cv2.imshow('ORIGINAL IMAGE',image)
+image[200, 200] = [255, 255, 255] 
+cv2.imshow('MODIFIED IMAGE', image)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 ```
-![Screenshot 2024-09-09 183224](https://github.com/user-attachments/assets/b66ec7b6-df97-401b-bcbf-d67c44f8add0)
-![Screenshot 2024-09-09 175923](https://github.com/user-attachments/assets/68225457-5953-4c26-8ccd-3c93f191eb6c)
+
+![11](https://github.com/user-attachments/assets/e5b15fd4-be22-4e56-9b82-34428bc8de59)
+
+
+
+### v)Image Resizing:
+Resize the original image to half its size and display it.
+```
+cv2.imshow('ORIGINAL IMAGE',image)
+resized_image = cv2.resize(image, (image.shape[1] // 2, image.shape[0] // 2))
+cv2.imshow('RESIZED IMAGE', resized_image)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+```
+
+![12](https://github.com/user-attachments/assets/38726681-5c5a-4257-89a3-5203669aafae)
+
+
 
 ### vi)Image Cropping
+Crop a region of interest (ROI) from the image (e.g., a 100x100 pixel area starting at (50, 50)) and display it.
 ```
 import cv2
-
-# Load the image
-image1=cv2.imread('msdd.jpg',1)
-
-# Define the starting point and size of the ROI
+image = cv2.imread('virat.jpeg',1)
+image = cv2.resize(image,(400,300))
 x, y = 50, 50
 width, height = 100, 100
-
-# Crop the ROI
-roi = image1[y:y + height, x:x + width]
-
-# Display the cropped ROI
-cv2.imshow('Cropped Image', roi)
+roi = image[y:y + height, x:x + width]
+cv2.imshow('CROPPED IMAGE', roi)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 ```
-![Screenshot 2024-09-09 183224](https://github.com/user-attachments/assets/b66ec7b6-df97-401b-bcbf-d67c44f8add0)
-![Screenshot 2024-09-09 181535](https://github.com/user-attachments/assets/9321d335-8cbe-43a1-83f5-dcd99974a82b)
 
-### vii)Image Flipping
-i.)Flip the original image horizontally and display it.
+![13](https://github.com/user-attachments/assets/2686f81f-c0ba-469a-8102-dc5d9e7693d3)
+
+
+### vii)Image Flipping:
+(1) Flip the original image horizontally and display it.
 ```
 import cv2
-img = cv2.imread("msdd.jpg")
-img = cv2.resize(img,(300,200))
-res=cv2.rotate(img,cv2.ROTATE_180)
-cv2.imshow('Original',img)
-cv2.imshow('Image Window', res)
+image = cv2.imread("virat.jpeg")
+image = cv2.resize(image,(300,200))
+res=cv2.rotate(image,cv2.ROTATE_180)
+cv2.imshow('ORIGINAL IMAGE',image)
+cv2.imshow('FLIPPED IMAGE', res)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 ```
-![Screenshot 2024-09-09 183224](https://github.com/user-attachments/assets/b66ec7b6-df97-401b-bcbf-d67c44f8add0)
-![Screenshot 2024-09-09 181548](https://github.com/user-attachments/assets/daea0375-26f2-45e2-842f-360eb96d35b7)
 
-ii.)Flip the original image vertically and display it.
+![14](https://github.com/user-attachments/assets/a69c3715-1d04-446e-b6ed-127090c38cb2)
+
+
+
+(2) Flip the original image vertically and display it.
 ```
 import cv2
-
-img = cv2.imread("msdd.jpg")
-img = cv2.resize(img,(300,200))
-res=cv2.rotate(img,cv2.ROTATE_90_CLOCKWISE)
-# Display the HSV image
-cv2.imshow('Original',img)
-cv2.imshow('Image Window', res)
+image = cv2.imread("virat.jpeg")
+image = cv2.resize(image,(300,200))
+res=cv2.rotate(image,cv2.ROTATE_90_CLOCKWISE)
+cv2.imshow('ORIGINAL IMAGE',image)
+cv2.imshow('FLIPPED IMAGE', res)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 ```
-![Screenshot 2024-09-09 183224](https://github.com/user-attachments/assets/b66ec7b6-df97-401b-bcbf-d67c44f8add0)
-![Screenshot 2024-09-09 181716](https://github.com/user-attachments/assets/22c38b66-09f3-4019-bedb-a6489f3e008e)
 
 
-<br>
-<br>
+![15](https://github.com/user-attachments/assets/34bc028b-ce7c-43ad-88f0-0eb4d395fff3)
+
 
 ### viii)Write and Save the Modified Image
+Save the final modified image to your local directory.
 ```
- cv2.imwrite('lion.jpg',image)
+import cv2
+img = cv2.imread("virat.jpeg")
+img = cv2.resize(img,(300,200))
+cv2.imwrite('dip.jpeg',img)
 ```
-![Screenshot 2024-09-09 181821](https://github.com/user-attachments/assets/e1dbbd26-d5db-4f15-9c2f-422e9e7bbeb0)
+
+![16](https://github.com/user-attachments/assets/4b17ca01-5e4f-48e4-8655-d01f897526a7)
+
+
 ## Result:
-Thus the images are read, displayed, and written ,and color conversion was performed  successfully using the python program.
 
-
-
-
-
-
-
-
-
-
-
-
-
+Thus the images are read, displayed, and written ,and color conversion was performed successfully using the python program.
 
