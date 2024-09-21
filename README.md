@@ -1,4 +1,4 @@
-# EXP:-1 COLOR_CONVERSIONS_OF-IMAGE
+# EXP-1 COLOR_CONVERSIONS_OF-IMAGE
 
 ## AIM
 Write a Python program using OpenCV that performs the following tasks:
