@@ -121,7 +121,7 @@ cv2.waitKey(0)
 cv2.destroyAllWindows()
 ```
 
-![4](https://github.com/user-attachments/assets/d1c22a73-d893-4472-8a22-ebdaa82a34cd)
+![image](https://github.com/user-attachments/assets/35c6b433-6002-4fa5-8b83-b72726316463)
 
 
 4.Add the text "Cricket" at the top-left corner of the image.
